@@ -26,7 +26,7 @@ class Database extends Config
 	public $defaultGroup = 'default';
 
 	/**
-	 * The default database connection. korea
+	 * The default database connection. Republica de korea 
 	 *
 	 * @var array 
 	 */
