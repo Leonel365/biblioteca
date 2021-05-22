@@ -1,13 +1,25 @@
-<?=$cabecera?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0">
+    <title>Document</title>
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+</head>
+<body>
+Sistema de libros 
+    <div class="container">
+
 Formulario de crear
-/** se   crea el formulario para agregar unnuevo libro*/
+
     <div class="card">
         <div class="card-body">
         <h5 class ="card-title">Ingresar datos del libro</h5>
         <p class="card-text">
 
-  /** En el action se especifica la ruta donde se enviará la información del formulario*/
-    <form method="post" action="<?=site_url('/guardar')?>" enctype="mulpipart/form-data">
+    <form method="post" action="<?=base_url('guardar')?>" enctype="mulpipart/form-data">
     
     <div class="form-group">
         <label for="nombre">Nombre</label>
@@ -24,7 +36,7 @@ Formulario de crear
         </p>
         </div>
     </div>
-
-   
-
-<?=$pie?>
+    
+    </div>
+</body>
+</html>

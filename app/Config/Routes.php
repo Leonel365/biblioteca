@@ -53,4 +53,4 @@ if (file_exists(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php'))
 }
 $routes->get('listar', 'Libros::index');
 $routes->get('crear', 'Libros::crear');
-$routes->get('guardar', 'Libros::guardar');
+$routes->post('guardar', 'Libros::guardar');
