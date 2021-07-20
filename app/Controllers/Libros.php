@@ -26,8 +26,20 @@ class Libros extends Controller{
     }
 
     public function guardar(){
+        $libro = new Libro();
         $nombre= $this->request->getVar('nombre');
-        print_r($nombre);
-    }
 
+        if($imagen=$this->request->getFile('imagen')){
+            $nuevoNombre= $imagen->gentRandomName();
+            $imagen->move('../public/uploads/',$nuevoNombre);
+
+            $datos=[
+                'nombre'=>$this->getVar('nombre'),
+                'imagen'=>$nuevoNombre
+            ];
+            $libro->insert($datos);
+          
+        }
+        echo "Agregado a BD";
+}
 }

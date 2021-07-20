@@ -7,7 +7,7 @@ Formulario de crear
         <h5 class ="card-title">Ingresar datos del libro</h5>
         <p class="card-text">
 
-    <form method="post" action="<?=base_url('guardar')?>" enctype="mulpipart/form-data">
+    <form method="post" action="<?=site_url('guardar')?>" enctype="mulpipart/form-data">
     
     <div class="form-group">
         <label for="nombre">Nombre</label>
