@@ -42,4 +42,9 @@ class Libros extends Controller{
         }
         echo "Agregado a BD";
 }
+
+    public function borrar($id = null){
+    echo "borrar libro ".$id;
+    
+    }
 }
