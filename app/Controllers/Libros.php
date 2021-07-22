@@ -30,14 +30,15 @@ class Libros extends Controller{
         $nombre= $this->request->getVar('nombre');
 
         if($imagen=$this->request->getFile('imagen')){
-            $nuevoNombre= $imagen->gentRandomName();
+            $nuevoNombre= $imagen->getRandomName();
             $imagen->move('../public/uploads/',$nuevoNombre);
 
             $datos=[
-                'nombre'=>$this->getVar('nombre'),
+                'nombre'=>$nombre,
                 'imagen'=>$nuevoNombre
             ];
-            $libro->insert($datos);
+           
+           $libro->insert($datos);
           
         }
         echo "Agregado a BD";

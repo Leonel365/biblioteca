@@ -7,5 +7,5 @@ class Libro extends Model{
     protected $table      = 'libros';
     // Uncomment below if you want add primary key
      protected $primaryKey = 'id';
-     protected $allwedFields = ['nombre','imagen'];
+     protected $allowedFields = ['nombre','imagen'];
 }
