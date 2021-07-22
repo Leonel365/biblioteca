@@ -44,8 +44,23 @@ class Libros extends Controller{
         echo "Agregado a BD";
 }
 
-    public function borrar($id = null){
-    echo "borrar libro ".$id;
+public function borrar($id = null){
+
+    $libro = new Libro();
+
+    $datosLibro=$libro->where('id',$id)->first();
+
     
-    }
+
+    $ruta=('../public/uploads/'.$datosLibro['imagen']);
+
+    unlink($ruta);
+
+
+
+echo "borrar libro ".$id;
+
+return $this->response->redirect(site_url('/listar'));
+
+}
 }
