@@ -45,7 +45,14 @@ class Libros extends Controller{
 }
 
     public function borrar($id = null){
-    echo "borrar libro ".$id;
+    $libro = new Libro();
+    $datoImagen= $libro->where('id',$id)->first();
+
+    $rutaImagen = ('../public/uploads/'.$datoImagen['imagen']);
+    unlink($rutaImagen);
+
+    $libro->where('id',$id)->delete($id);
     
-    }
+    return $this->response->rediret(site_url('/listar'));  
+ }
 }

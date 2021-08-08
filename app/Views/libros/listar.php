@@ -16,7 +16,7 @@
                     <td><?=$libro['imagen']?></td>
                     <td><?=$libro['nombre']?></td>
                     <td>Editar/
-                    <a href= "<?base_url('borrar/'.$libro['id']);?>" class ="btn btn-danger" type ="button">Borrar</a>
+                    <a href= "<?=base_url('borrar/'.$libro['id']);?>" class ="btn btn-danger" type ="button">Borrar</a>
                     </td>
                 </tr>
                   
