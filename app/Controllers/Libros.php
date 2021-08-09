@@ -41,7 +41,7 @@ class Libros extends Controller{
            $libro->insert($datos);
           
         }
-        echo "Agregado a BD";
+        return $this->response->redirect(site_url('/listar'));  
 }
 
     public function borrar($id = null){
@@ -53,6 +53,37 @@ class Libros extends Controller{
 
     $libro->where('id',$id)->delete($id);
     
-    return $this->response->rediret(site_url('/listar'));  
+    return $this->response->redirect(site_url('/listar'));  
  }
+
+    public function editar($id = null){
+     
+        $libro = new Libro();
+
+        $datos['cabecera']= view('template/cabecera');
+        $datos['pie']= view('template/piepagina');
+
+        $datos['libro'] = $libro->where('id',$id)->first();
+     
+        return view('libros/editar',$datos);
+
+    }
+
+    public function actualizar(){
+        $libro = new Libro();
+
+        $datos=['nombre'=>$this->request->getVar('nombre')];
+        $id  = $this->request->getVar('id');
+        
+        $libro->update($id,$datos);
+
+        $validation = $this->validate([
+            'imagen' => [
+                'uploaded[imagen]',
+                'mime_in[imagen,image/jpg,image/jpeg,image/png]',
+                'max_size[imagen,1024]',
+            ]
+        ]);
+
+    }
 }
