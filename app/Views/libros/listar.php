@@ -19,7 +19,7 @@
                     <td><?=$libro['nombre']?></td>
                     <td>
                         <div class="text-center">
-                        <a href= "<?=base_url('editar/'.$libro['id']);?>" class ="btn btn-info" type ="button">Editar</a>
+                        <a href= "<?=base_url('editar/'.$libro['id']);?>" class ="btn btn-info" style="color:white" type ="button">Editar</a>
                          <a href= "<?=base_url('borrar/'.$libro['id']);?>" class ="btn btn-danger" type ="button">Borrar</a>     
                         </div>
                     </td>

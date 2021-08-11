@@ -11,7 +11,7 @@ Formulario de crear
     
     <div class="form-group">
         <label for="nombre">Nombre</label>
-        <input id="nombre" class="form-control" name="nombre" type="text">
+        <input id="nombre" value ="<?=old('nombre')?>" class="form-control" name="nombre" type="text">
     </div>
 
     <div class="form-group">
@@ -20,6 +20,7 @@ Formulario de crear
     </div>
     <br>
     <button class="btn btn-success" type="submit">Guardar</button>
+    <a  href="<?=base_url('listar');?>" class="btn btn-info" style="color:white">Cancelar</a>
     </form>
         </p>
         </div>

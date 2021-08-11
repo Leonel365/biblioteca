@@ -23,6 +23,7 @@
     <br>
    
     <button class="btn btn-success" type="submit">Actualizar</button>
+    <a  href="<?=base_url('listar');?>" class="btn btn-info" style="color:white" >Cancelar</a>
     </form>
         </p>
         </div>
