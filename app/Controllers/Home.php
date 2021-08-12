@@ -12,6 +12,6 @@ class Home extends BaseController
 
         $datos['cabecera']= view('template/cabecera');
         $datos['pie']= view('template/piepagina');
-		return view('libros/crear', $datos);
+		return view('libros/listar', $datos);
 	}
 }
